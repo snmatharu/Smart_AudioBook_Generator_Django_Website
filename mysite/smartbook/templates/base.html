@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{% static 'assets/favicon.ico' %}">
+
+    <title>{% block title %}{% endblock %} - AC - AudioBooks</title>
+
+
+  </head>
+
+  <body data-new-gr-c-s-check-loaded="14.1006.0" data-gr-ext-installed="">
+
+    <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-1 pt-1">
+           
+          </div>
+          
+          <div class="col-10 text-center">
+            <img src="{% static 'logo.png' %}" alt="ATOM-Connect">
+          </div>
+
+          <div class="col-1 d-flex justify-content-end align-items-center">
+            
+           </div>
+        </div>
+      </header>
+<hr>
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+          
+          <a class="p-2 text-muted" href="/">Home</a>
+          <a class="p-2 text-muted" href="/upload">Generator</a>
+        </nav>
+      </div>
+
+      <div id="content">{% block content %}{% endblock %}</div>
+
+ 
+      {% block footer %}
+      <footer class="page-footer font-small white fixed-bottom">
+
+        <!-- Copyright -->
+        <div style="
+        width: 100%;
+        height: 40px;
+        padding-top: 10px;
+        background-color: #222222;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        
+        ">
+          <a style="color: white;"href="https://atomconnect.com/">© ATOM-Connect</a>
+        </div>
+        <!-- Copyright -->
+      
+      </footer>
+      {% endblock %}
+</body></html>

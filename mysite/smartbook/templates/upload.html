@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Upload{% endblock %}
+{% block content %}
+<body>
+  <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-10 px-0">
+      <h1 class="display-4 font-italic">Audio Book Generator</h1>
+      <p class="lead my-3">ATOM-Connect</p>
+      </div>
+  </div>
+    <h3 style="color:gray;">Upload your files below</h3>
+    <div> 
+    <form method="post" enctype="multipart/form-data" >
+    {% csrf_token %}
+    <h2></h2>
+    <input type="file" name="document" class="form-control" id="formFileLg">
+    <h2></h2><h2></h2>
+    <button type="submit" class="btn btn-primary">Upload & Convert</button>   
+    </form>
+  {% if url %}
+  <h2></h2><h2></h2>
+    <p class="text-center">Your Audio Book is Ready   <a href="{{ url }}" download class="btn btn-outline-success">Download</a></p>
+  {% endif %}
+  </div>
+</body>
+{% endblock %}
