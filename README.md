@@ -5,4 +5,3 @@ $ cd mysite
 
 $ python manage.py runserver
 
-Note*: You can also use the virtual environment by extracting vnev.zip then, $ source vnev/bin/activate
